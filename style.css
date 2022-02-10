@@ -96,14 +96,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #4527a0;
+  background-color: transparent;
   align-items: center;
   color: white;
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
+#navbar.navbar--dark {
+  background-color: #0d47a1;
+  padding: 8px;
+}
 .navbar__menu {
   display: flex;
 }
@@ -139,6 +146,7 @@ p {
   height: 659px;
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
