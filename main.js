@@ -40,9 +40,23 @@ document.addEventListener('scroll', ()=>{
     homeSection.style.opacity = 1 - window.scrollY / homeSectionHeight; 
 });
 
+// Show "arrow up" button when scrolling down
+const arrowBtn = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=> {  
+    if(window.scrollY > navbarHeight){
+        arrowBtn.classList.add('visible');
+    } else {
+        arrowBtn.classList.remove('visible');
+    }
+});
 
+// Make arrow function go to the top of the page
+arrowBtn.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: 'smooth'});
 }
+

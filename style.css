@@ -102,6 +102,7 @@ p {
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
+  z-index: 10;
   color: white;
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
@@ -467,6 +468,32 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: #424242;
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1a237e;
+  right: 30px;
+  bottom: 30px;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.arrow-up i {
+  line-height: 50px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
 }
 
 /* For below 768px screen width */
