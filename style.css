@@ -127,6 +127,10 @@ p {
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
 }
+.navbar__menu__item.active {
+  border: 1px solid white;
+  border-radius: var(--size-border-radius);
+}
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
